@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface UserService {
     List<User> getAll();
-    void saveNewUser(User user);
+    void saveUser(User user);
     Optional<User> findById(ObjectId id);
     void deleteById(ObjectId id);
     User findByUserName(String userName);

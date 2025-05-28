@@ -30,7 +30,7 @@ public class JournalEntryServiceImpl implements JournalEntryService {
                 journalEntry.setDate(LocalDateTime.now());
                 JournalEntry entry = journalEntryRepository.save(journalEntry);
                 user.getJournalEntries().add(entry);
-                userService.saveNewUser(user);
+                userService.saveUser(user);
             }
         }catch(Exception e) {
             throw new RuntimeException("An error occurred while saving the entry : ", e);
@@ -48,7 +48,7 @@ public class JournalEntryServiceImpl implements JournalEntryService {
     public void deleteById(ObjectId id, String userName) {
         User user = userService.findByUserName(userName);
         user.getJournalEntries().removeIf(x -> x.getId().equals(id));
-        userService.saveNewUser(user);
+        userService.saveUser(user);
         journalEntryRepository.deleteById(id);
     }
     public JournalEntry updateById(ObjectId id, JournalEntry journalEntry) {
