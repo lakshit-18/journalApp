@@ -13,7 +13,7 @@ public interface JournalEntryService {
     void saveEntry(JournalEntry journalEntry);
     List<JournalEntry> getAll();
     Optional<JournalEntry> findById(ObjectId id);
-    void deleteById(ObjectId id, String userName);
+    boolean deleteById(ObjectId id, String userName);
     JournalEntry updateById(ObjectId id, JournalEntry journalEntry);
 
 }

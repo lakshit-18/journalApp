@@ -8,8 +8,10 @@ import java.util.Optional;
 
 public interface UserService {
     List<User> getAll();
-    void saveUser(User user);
+    boolean saveNewUser(User user);
     Optional<User> findById(ObjectId id);
     void deleteById(ObjectId id);
     User findByUserName(String userName);
+    void saveUser(User user);
+    void saveAdmin(User user);
 }
