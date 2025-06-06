@@ -27,5 +27,7 @@ public class User {
     private String password;
     @DBRef // Used to get the reference of the other collection in the output
     List<JournalEntry> journalEntries = new ArrayList<>();
+    private String email;
+    private boolean sentimentAnalysis;
     List<String> roles;
 }
