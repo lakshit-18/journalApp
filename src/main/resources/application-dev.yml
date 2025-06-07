@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://lakshitlohar02:18ll_2002@cluster0.dhec31z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database : journaldb
+      auto-index-creation : true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /journal
+
+weather:
+  api:
+    key: 58edbd770fb8cf486a399bf5d0831c04
